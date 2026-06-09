@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index">
+<title>Gizlilik Politikası — Kapıdan Önce</title>
+<style>
+  :root{
+    --green:#1B8A63; --green2:#3CBD8A; --deep:#0A5238;
+    --ink:#14211D; --muted:#5b6b65; --bg:#f6f8f6; --card:#ffffff; --line:#e6efe9;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:28px 20px 64px}
+  header{
+    background:linear-gradient(160deg,var(--green2),var(--green) 55%,var(--deep));
+    color:#fff; border-radius:22px; padding:26px 24px; margin-bottom:26px;
+    box-shadow:0 10px 30px rgba(10,82,56,.18);
+  }
+  header h1{margin:0 0 4px; font-size:1.5rem; letter-spacing:.2px}
+  header p{margin:0; opacity:.9; font-size:.95rem}
+  .toggle{display:flex; gap:8px; margin:18px 0 22px}
+  .toggle button{
+    flex:0 0 auto; border:1px solid var(--line); background:var(--card); color:var(--muted);
+    padding:8px 16px; border-radius:999px; font-weight:600; font-size:.9rem; cursor:pointer;
+  }
+  .toggle button[aria-pressed="true"]{background:var(--green); border-color:var(--green); color:#fff}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:8px 22px 22px; box-shadow:0 4px 16px rgba(20,33,29,.04)}
+  h2{font-size:1.12rem; margin:26px 0 8px; color:var(--deep)}
+  ul{margin:8px 0; padding-left:20px}
+  li{margin:6px 0}
+  a{color:var(--green); font-weight:600}
+  .updated{color:var(--muted); font-size:.85rem; margin:4px 0 0}
+  .foot{color:var(--muted); font-size:.82rem; text-align:center; margin-top:26px}
+  strong{color:var(--ink)}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Kapıdan Önce</h1>
+    <p id="subtitle">Gizlilik Politikası</p>
+  </header>
+
+  <div class="toggle" role="group" aria-label="Dil / Language">
+    <button id="btn-tr" aria-pressed="true" onclick="setLang('tr')">Türkçe</button>
+    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <section class="card" data-lang="tr">
+    <h2>Gizlilik Politikası</h2>
+    <p class="updated">Son güncelleme: 9 Haziran 2026</p>
+
+    <h2>Topladığımız veriler</h2>
+    <ul>
+      <li><strong>Hesap bilgileri:</strong> Ad soyad, e-posta ve (kayıt sırasında girersen) telefon numarası. Kimlik doğrulama Google Firebase Authentication ile yapılır. Google veya Apple ile giriş yaparsan, ilgili sağlayıcıdan e-posta ve ad bilgisi alınır.</li>
+      <li><strong>Kullanım verisi:</strong> Uygulamanın nasıl kullanıldığına dair anonim/istatistiksel veriler Firebase Analytics ile toplanır (çökme, etkileşim, genel kullanım). Reklam takibi (IDFA) yapılmaz.</li>
+      <li><strong>İçeriğin:</strong> Oluşturduğun kontrol maddeleri ve günlük tamamlama kayıtları <strong>cihazında</strong> saklanır.</li>
+      <li><strong>Fotoğraflar:</strong> "Fotoğrafla tamamla" özelliğinde çektiğin fotoğraflar yalnızca <strong>cihazında</strong> saklanır; sunucularımıza yüklenmez.</li>
+    </ul>
+
+    <h2>Verileri nasıl kullanırız</h2>
+    <ul>
+      <li>Hesabını oluşturmak ve oturum açmanı sağlamak</li>
+      <li>Temel işlevleri (kontrol listeleri, hatırlatmalar, abonelik) sunmak</li>
+      <li>Uygulamayı iyileştirmek için toplu/istatistiksel analiz</li>
+    </ul>
+
+    <h2>Üçüncü taraflar</h2>
+    <ul>
+      <li><strong>Google Firebase</strong> (Authentication, Analytics) — kimlik doğrulama ve istatistik</li>
+      <li><strong>Apple</strong> — Apple ile Giriş ve uygulama içi abonelik ödemeleri (ödeme bilgilerini biz görmeyiz)</li>
+    </ul>
+
+    <h2>Bildirimler</h2>
+    <p>İzin verirsen, eklediğin düzenli maddeler için günlük hatırlatma bildirimleri gönderilir. İzni cihaz ayarlarından kapatabilirsin.</p>
+
+    <h2>Abonelikler</h2>
+    <p>Pro aboneliği Apple üzerinden yönetilir. Ödeme Apple hesabından alınır; iptal/yönetim Apple Kimliği ayarlarından yapılır.</p>
+
+    <h2>Veri saklama ve silme</h2>
+    <ul>
+      <li>Hesabını ve verilerini uygulama içinden silebilirsin: <strong>Profil → Hesap Ayarları → Hesabımı sil</strong>. Bu işlem hesabını ve cihazdaki verilerini (maddeler, kayıtlar, fotoğraflar) kalıcı olarak kaldırır; Apple ile Giriş kullandıysan ilgili erişim de iptal edilir.</li>
+      <li>Cihazdaki veriler uygulamayı silersen de kaldırılır.</li>
+      <li>Başka talepler için <a href="mailto:kemalcansu@icloud.com">kemalcansu@icloud.com</a> adresinden bize ulaşabilirsin.</li>
+    </ul>
+
+    <h2>Çocukların gizliliği</h2>
+    <p>Uygulama 13 yaş altı çocuklara yönelik değildir.</p>
+
+    <h2>Değişiklikler</h2>
+    <p>Bu politikayı zaman zaman güncelleyebiliriz; önemli değişiklikleri uygulama veya bu sayfa üzerinden bildiririz.</p>
+
+    <h2>İletişim</h2>
+    <p>Sorular için: <a href="mailto:kemalcansu@icloud.com">kemalcansu@icloud.com</a><br>
+    Sorumlu: <strong>Kapıdan Önce</strong></p>
+  </section>
+
+  <!-- ENGLISH -->
+  <section class="card" data-lang="en" hidden>
+    <h2>Privacy Policy</h2>
+    <p class="updated">Last updated: June 9, 2026</p>
+
+    <h2>Data we collect</h2>
+    <ul>
+      <li><strong>Account info:</strong> Full name, email and (if you enter it at sign-up) phone number. Authentication is handled by Google Firebase Authentication. If you sign in with Google or Apple, we receive your email and name from that provider.</li>
+      <li><strong>Usage data:</strong> Anonymous/aggregate usage analytics via Firebase Analytics (crashes, interactions, general usage). No ad tracking (no IDFA).</li>
+      <li><strong>Your content:</strong> Items and completion records are stored <strong>on your device</strong>.</li>
+      <li><strong>Photos:</strong> Photos taken for the "photo to complete" feature are stored <strong>only on your device</strong> and are not uploaded to our servers.</li>
+    </ul>
+
+    <h2>How we use data</h2>
+    <ul>
+      <li>To create your account and let you sign in</li>
+      <li>To provide core features (checklists, reminders, subscription)</li>
+      <li>To improve the app via aggregate analytics</li>
+    </ul>
+
+    <h2>Third parties</h2>
+    <ul>
+      <li><strong>Google Firebase</strong> (Authentication, Analytics)</li>
+      <li><strong>Apple</strong> — Sign in with Apple and in-app subscription payments (we never see payment details)</li>
+    </ul>
+
+    <h2>Notifications</h2>
+    <p>With your permission, daily reminders are sent for your routine items. You can disable this in device settings.</p>
+
+    <h2>Subscriptions</h2>
+    <p>Pro subscription is managed through Apple. Payment is charged to your Apple account; cancel/manage via your Apple ID settings.</p>
+
+    <h2>Data retention &amp; deletion</h2>
+    <ul>
+      <li>You can delete your account and data in-app: <strong>Profile → Account Settings → Delete my account</strong>. This permanently removes your account and on-device data (items, records, photos); if you used Sign in with Apple, that access is also revoked.</li>
+      <li>On-device data is also removed when you delete the app.</li>
+      <li>For any other requests, contact us at <a href="mailto:kemalcansu@icloud.com">kemalcansu@icloud.com</a>.</li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>The app is not directed to children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy from time to time.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href="mailto:kemalcansu@icloud.com">kemalcansu@icloud.com</a><br>
+    Controller: <strong>Kapıdan Önce</strong></p>
+  </section>
+
+  <p class="foot">© 2026 Kapıdan Önce · <a href="destek.html">Destek / Support</a></p>
+</div>
+
+<script>
+  function setLang(l){
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-lang]').forEach(s => s.hidden = (s.dataset.lang !== l));
+    document.getElementById('btn-tr').setAttribute('aria-pressed', l==='tr');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l==='en');
+    document.getElementById('subtitle').textContent = (l==='tr') ? 'Gizlilik Politikası' : 'Privacy Policy';
+  }
+  // Tarayıcı dili İngilizce ise EN aç
+  if ((navigator.language||'').toLowerCase().startsWith('en')) setLang('en');
+</script>
+</body>
+</html>

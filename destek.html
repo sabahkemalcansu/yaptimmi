@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destek — Kapıdan Önce</title>
+<style>
+  :root{
+    --green:#1B8A63; --green2:#3CBD8A; --deep:#0A5238;
+    --ink:#14211D; --muted:#5b6b65; --bg:#f6f8f6; --card:#ffffff; --line:#e6efe9;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:720px; margin:0 auto; padding:28px 20px 64px}
+  header{background:linear-gradient(160deg,var(--green2),var(--green) 55%,var(--deep));
+    color:#fff; border-radius:22px; padding:26px 24px; margin-bottom:26px;
+    box-shadow:0 10px 30px rgba(10,82,56,.18);}
+  header h1{margin:0 0 4px; font-size:1.5rem}
+  header p{margin:0; opacity:.9; font-size:.95rem}
+  .toggle{display:flex; gap:8px; margin:18px 0 22px}
+  .toggle button{border:1px solid var(--line); background:var(--card); color:var(--muted);
+    padding:8px 16px; border-radius:999px; font-weight:600; font-size:.9rem; cursor:pointer;}
+  .toggle button[aria-pressed="true"]{background:var(--green); border-color:var(--green); color:#fff}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:8px 22px 22px; box-shadow:0 4px 16px rgba(20,33,29,.04)}
+  h2{font-size:1.12rem; margin:24px 0 8px; color:var(--deep)}
+  a{color:var(--green); font-weight:600}
+  .mail{display:inline-block; margin:6px 0 2px; font-size:1.05rem}
+  .muted{color:var(--muted); font-size:.9rem}
+  ul{padding-left:20px} li{margin:6px 0}
+  .foot{color:var(--muted); font-size:.82rem; text-align:center; margin-top:26px}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Kapıdan Önce</h1>
+    <p id="subtitle">Destek</p>
+  </header>
+
+  <div class="toggle" role="group" aria-label="Dil / Language">
+    <button id="btn-tr" aria-pressed="true" onclick="setLang('tr')">Türkçe</button>
+    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <section class="card" data-lang="tr">
+    <h2>Yardıma mı ihtiyacın var?</h2>
+    <p>Sorun, soru veya önerin için bize yaz — memnuniyetle yardımcı oluruz. Genellikle <strong>1–2 iş günü</strong> içinde yanıtlıyoruz.</p>
+    <p class="mail">📧 <a href="mailto:kemalcansu@icloud.com">kemalcansu@icloud.com</a></p>
+
+    <h2>Sık sorulanlar</h2>
+    <ul>
+      <li><strong>Aboneliğimi nasıl iptal ederim?</strong> iPhone → Ayarlar → (adın) → Abonelikler → Kapıdan Önce → İptal.</li>
+      <li><strong>Hesabımı nasıl silerim?</strong> Uygulamada <strong>Profil → Hesap Ayarları → Hesabımı sil</strong>. Hesabın ve verilerin kalıcı olarak silinir.</li>
+      <li><strong>Bildirimler gelmiyor.</strong> iPhone → Ayarlar → Bildirimler → Kapıdan Önce'den izinleri aç.</li>
+    </ul>
+
+    <p class="muted">Gizlilik için: <a href="index.html">Gizlilik Politikası</a></p>
+  </section>
+
+  <!-- ENGLISH -->
+  <section class="card" data-lang="en" hidden>
+    <h2>Need help?</h2>
+    <p>Reach out for any issue, question or suggestion — we're happy to help. We usually reply within <strong>1–2 business days</strong>.</p>
+    <p class="mail">📧 <a href="mailto:kemalcansu@icloud.com">kemalcansu@icloud.com</a></p>
+
+    <h2>FAQ</h2>
+    <ul>
+      <li><strong>How do I cancel my subscription?</strong> iPhone → Settings → (your name) → Subscriptions → Kapıdan Önce → Cancel.</li>
+      <li><strong>How do I delete my account?</strong> In the app: <strong>Profile → Account Settings → Delete my account</strong>. Your account and data are permanently removed.</li>
+      <li><strong>Notifications aren't arriving.</strong> iPhone → Settings → Notifications → enable for Kapıdan Önce.</li>
+    </ul>
+
+    <p class="muted">Privacy: <a href="index.html">Privacy Policy</a></p>
+  </section>
+
+  <p class="foot">© 2026 Kapıdan Önce</p>
+</div>
+
+<script>
+  function setLang(l){
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-lang]').forEach(s => s.hidden = (s.dataset.lang !== l));
+    document.getElementById('btn-tr').setAttribute('aria-pressed', l==='tr');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l==='en');
+    document.getElementById('subtitle').textContent = (l==='tr') ? 'Destek' : 'Support';
+  }
+  if ((navigator.language||'').toLowerCase().startsWith('en')) setLang('en');
+</script>
+</body>
+</html>
